@@ -1,0 +1,274 @@
+body{
+    margin-top: 150px;
+    background-image: url("https://marista.org.br/wp-content/uploads/2020/10/frases-religiosas-sobre-missao-min-scaled-e1603573990111.jpg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-size: 100%;
+   
+}
+
+a{
+    
+    grid-column: 2/3;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover{
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 3fr 2fr ;
+}
+
+.form{
+    background-color: #fff;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2%;
+    max-width: 100%;
+    opacity: 0.77;
+    border:2px solid saddlebrown;
+    border-radius: 10px;
+    
+    
+}
+
+.titulo{
+    margin-top: -4px;
+    grid-column: 2/2;
+    text-align: center;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.user{
+    grid-column: 2/2;
+    font-size: 16px;
+    margin-left: -20%;
+    width: 140%;
+    height: 40px;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    
+    
+}
+
+.email{
+    grid-column: 2/2;
+    font-size: 16px;
+    margin-left: -20%;
+    width: 140%;
+    height: 40px;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    
+}
+
+.simbolo-1{
+  color: black;
+  font-size: 20px;
+}
+
+
+.senha{
+    grid-column: 2/2;
+    font-size: 16px;
+    margin-left: -20%;
+    width: 140%;
+    height: 40px;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    
+}
+
+.confirmar_senha{
+    grid-column: 2/2;
+    font-size: 16px;
+    margin-left: -20%;
+    width: 140%;
+    height: 40px;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+}
+
+.info{
+    background-color:#231f15;
+    padding: 5px;
+    margin-left: -2%;
+    width: 100%;
+    border-radius: 10px ;
+    font-size: 16px;
+    color: #eaebdb ;
+}
+.enviar{
+    font-weight: bold;
+    grid-column: 2/2;
+    width: 80%;
+    color: black;
+    height: 35px;
+    margin-left: 10%;  
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.enviar:hover{
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.cadastrar{
+    grid-column: 2/2;
+    width: 75%;
+    margin-left: 10%;
+    text-decoration-line: none ;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid black;
+    color: floralwhite;
+    padding: 5px;
+    text-align: center;
+    background-color: saddlebrown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    
+}
+
+.esqueceu_senha{
+    grid-column: 1/3;
+    margin-left: 33%;
+    text-decoration-line: none;
+    color: saddlebrown;
+}
+
+.info{
+    grid-column: 2/2;
+}
+
+
+
+@media only screen and (max-width:600px ) {
+    body{
+        margin-top: 150px;
+        background-repeat: repeat;
+    }
+
+    .form{
+        background-color: #fff;
+        margin-left: 20%;
+        margin-right: 15%;
+      
+        padding: 2%;
+        max-width: 100%;
+        opacity: 0.77;
+        border:2px solid saddlebrown;
+        border-radius: 10px;
+        
+        
+    }
+   
+    .grid{
+        display: grid;
+        gap: 20px;
+        grid-template-columns:0fr 3fr 0fr;
+    }
+      
+    .titulo{
+        grid-column: 2/2;
+        text-align: center;
+        
+    }
+    .user{
+        margin-top: -10px;
+        grid-column: 2/2;
+        width: 97%;
+        margin-left: 1%;
+        height: 30px;
+        cursor: pointer;
+        border: 1px solid saddlebrown;
+        border-radius: 5px;
+        background: transparent;
+        
+    }
+
+    
+.email{
+    grid-column: 2/2;
+    width: 97%;
+    margin-left: 1%;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    background: transparent;
+    
+}
+
+    .senha{
+        grid-column: 2/2;
+        width: 97%;
+        margin-left: 1%;
+        height: 30px;
+        cursor: pointer;
+        border: 1px solid saddlebrown;
+        border-radius: 5px;
+    }
+
+    .confirmar_senha{
+        grid-column: 2/2;
+        width: 97%;
+        margin-left: 1%;
+        height: 30px;
+        cursor: pointer;
+        border: 1px solid saddlebrown;
+        border-radius: 5px;
+    }
+    
+    .enviar{
+        grid-column: 2/2;
+        width: 57%;
+        height: 30px;
+        margin-left: 25%;
+        cursor: pointer;
+        border-radius: 10px;        
+    }
+    
+    .cadastrar{
+        grid-column: 2/2;
+        width: 50%;
+        margin-left: 25%;
+        text-decoration-line: none ;
+        cursor: pointer;
+        border: 2px solid black;
+        color: floralwhite;
+        padding: 5px;
+        text-align: center;
+        background-color: saddlebrown;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 5px;
+        
+    }
+
+    .esqueceu_senha{
+        grid-column: 2/3;
+        margin-left: -5%;
+        text-decoration-line: none;
+        color: saddlebrown;
+    }
+
+    .info{
+        grid-column: 2/2;
+    }
+}

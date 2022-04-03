@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  
+</head>
+<body>
+    <section class="section-formulario">
+        <div class="form">
+            <form name="formuser" class="grid"> 
+                <h1 class="titulo">Cadastro</h1>
+                <input id="user" class="user" type="text" placeholder="User">
+                <input id="email" class="email" type="text" placeholder="Email">
+                <input id="senha" class="senha" type="password" placeholder="Senha">
+                <input id="confirmar_senha" class="confirmar_senha" type="password"  placeholder="Confirmar Senha">
+               
+
+                <div class="info">
+                    <div class="feed">Senha deve conter:</div>
+                    <div class="feed">&#9745; Número de caracteres: Mínimo 8</div>
+                    <div class="feed">&#9745; Letras Maiusculas: ABC</div>
+                    <div class="feed">&#9745; Números: Entre 0 e 9</div> 
+                    <div class="feed">&#9745; Caracteres especiais:@$%&!?</div> 
+                 </div><!-- info -->
+
+                <input class="enviar" type="submit" onclick=" cadastrar()" placeholder="Enviar">
+                <a class="cadastrar" href="./login.html ">Login</a>
+            </form><!-- grid -->
+        </div><!-- form -->
+    </section><!-- section-formulario -->
+
+  
+    <script src='./js/validarCadastro.js'></script>
+</body>
+</html>

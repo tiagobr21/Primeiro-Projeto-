@@ -15,7 +15,7 @@
 
 function cadastraPessoa(){
  event.preventDefault()
- url = "https://app-escala-api.herokuapp.com/v1/escalas"
+ url = "https://app-escala-api.herokuapp.com/v1/pessoas"
  let nome = document.getElementById("nome").value
  let fone = document.getElementById("fone").value
  let endereco = document.getElementById("endereco").value

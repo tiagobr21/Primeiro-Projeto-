@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 *{
     margin: 0;
@@ -223,115 +223,149 @@ body{
 .grid{
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2.2fr 2fr 2fr;
 }
 
-#btn_escala{
-    width: 50%;
-    height: 50px;
+.criar_pessoa{
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    grid-column: 2/4 ;
+    width: 40%;
+    height: 70px;
     margin: 5%;
     border-radius: 10px;
     border: 2px solid var(--black);
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
-    font-size: 16px;
-    /* box-shadow: 2px 2px 1px 1px var(--blue); */
+    font-size: 18px;
 }
 
 
-
-.titulo{
-  margin: -190px 0 50px 60px ;
-  color: var(--black);
-
-}
-
-#form_escala{
-    border: 3px solid var(--black); 
-    margin-top: 90px;
-    padding: 200px;
-    height: 40px;
-    width: 120%;
-    border-radius: 5px;
-    transition: 1s;
-}
-
-#form_escala.ativo{
-    display: none;
-
-}
-
-#nome{
-    
-    font-size: 16px;
-    margin-left: -20%;
-    width: 150%;
-    height: 50px;
-    margin-bottom: 10px ;
-    max-width: 180%;
-    cursor: pointer;
-    border: 1px solid var(--black2);
-    border-radius: 5px;
-   
-    
-}
-
-#pessoas{
- 
-    font-size: 16px;
-    margin-left: -20%;
-    width: 150%;
-    height: 50px;
-    margin-bottom: 10px ;
-    max-width: 180%;
-    cursor: pointer;
-    border: 1px solid var(--black2);
-    border-radius: 5px; 
-  
-}
-
-
-#locais{
- 
-    font-size: 16px;
-    margin-left: -20%;
-    width: 150%;
-    height: 50px;
-    margin-bottom: 10px ;
-    max-width: 180%;
-    cursor: pointer;
-    border: 1px solid var(--black2);
-    border-radius: 5px; 
-  
-}
-
-#data{
-    
-    font-size: 16px;
-    margin-right: 10;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 10px ;
-    cursor: pointer;
-    border: 1px solid var(--black2);
-    border-radius: 5px; 
+.consultar_pessoa{
+    text-decoration: none;
     text-align: center;
-}
-
-#criar{
-    width: 50%;
-    height: 50px;
-    margin-left: 70px;
+    padding: 20px;
+    max-width: 100%;
+    grid-column: 2/4 ;
+    width: 40%;
+    height: 70px;
+    margin: 5%;
     border-radius: 10px;
     border: 2px solid var(--black);
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
-    font-size: 16px;
-    
-    /* box-shadow: 2px 2px 1px 1px var(--blue); */
+    font-size: 18px;
 }
+
+.titulo{
+    margin: -230px 0 50px 60px ;
+    color: var(--black);
+  
+  }
+  
+  #form_criarpessoa{
+      margin-left: 20%;
+      border: 3px solid var(--black); 
+      margin-top: 40px;
+      padding: 240px;
+      height: 40px;
+      width: 120%;
+      border-radius: 5px;
+      transition: 1s;
+  }
+  
+  
+  #nome{
+      
+      font-size: 16px;
+      margin-left: -20%;
+      width: 150%;
+      height: 50px;
+      margin-bottom: 10px ;
+      max-width: 180%;
+      cursor: pointer;
+      border: 1px solid var(--black2);
+      border-radius: 5px;
+      margin-top: -20px;
+      
+  }
+  
+  #numero{
+   
+      font-size: 16px;
+      margin-left: -20%;
+      width: 150%;
+      height: 50px;
+      margin-bottom: 10px ;
+      max-width: 180%;
+      cursor: pointer;
+      border: 1px solid var(--black2);
+      border-radius: 5px; 
+    
+  }
+  
+  
+  #endereco{
+   
+      font-size: 16px;
+      margin-left: -20%;
+      width: 150%;
+      height: 50px;
+      margin-bottom: 10px ;
+      max-width: 180%;
+      cursor: pointer;
+      border: 1px solid var(--black2);
+      border-radius: 5px; 
+    
+  }
+  
+  #idade{
+    font-size: 16px;
+    margin-left: -20%;
+    width: 150%;
+    height: 50px;
+    margin-bottom: 10px ;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid var(--black2);
+    border-radius: 5px; 
+     
+  }
+
+  #data_nascimento{
+    font-size: 16px;
+    margin-left: -20%;
+    width: 150%;
+    height: 50px;
+    margin-bottom: 10px ;
+    max-width: 180%;
+    cursor: pointer;
+    border: 1px solid var(--black2);
+    border-radius: 5px; 
+     
+  }
+  
+  
+  #criar{
+      margin-top: 10px;
+      width: 50%;
+      height: 50px;
+      margin-left: 70px;
+      border-radius: 10px;
+      border: 2px solid var(--black);
+      background-color: var(--blue);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 16px;
+      
+      /* box-shadow: 2px 2px 1px 1px var(--blue); */
+  }
+  
+
 
 
 @media screen and (max-width: 600px){
@@ -348,10 +382,6 @@ body{
     
     .main{
         display: contents;
-    }
-
-    .toggle{
-      margin-left: x;
     }
     
 }

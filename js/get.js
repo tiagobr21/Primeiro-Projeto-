@@ -45,15 +45,15 @@ function principal(){
 principal() */
 
 /* visualizar no console */
-fetch('https://app-escala-api.herokuapp.com/v1/escalas')
+fetch('https://app-escala-api.herokuapp.com/v1/escalas/194')
   .then(response =>{
     return response.json();
   })
   .then(json =>{
-    document.querySelector('#nome').innerHTML = json[14].nome;
-    document.querySelector('#pessoas').innerHTML = json[14].pessoas;
-    document.querySelector('#locais ').innerHTML = json[14].locais;
-    document.querySelector('#data').innerHTML = json[14].data;
+    document.querySelector('#nome').innerHTML = json.nome;
+    document.querySelector('#pessoas').innerHTML = json.pessoas;
+    document.querySelector('#locais ').innerHTML = json.locais;
+    document.querySelector('#data').innerHTML = json.data;
     console.log(json)
   })
 

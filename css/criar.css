@@ -340,17 +340,14 @@ body{
         width: 100%;
         left: -100%;
         z-index: 1000;
-        
     }
     .navigation.ativo{
-        width: 100%;
-        left: 0;
+      width: 100%;
+      left: 0;
     }
-
-    main.ativo{
-        left: -80px;
-    }   
-   
-
+    
+    .main{
+        display: contents;
+    }
     
 }

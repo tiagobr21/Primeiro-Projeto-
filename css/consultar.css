@@ -173,18 +173,18 @@ body{
     cursor: pointer;
 }
 
-.pesquisar{
+#pesquisar{
    position: relative;
    width: 400px;
    margin: 0 10px;
 }
 
-.pesquisar label{
+#pesquisar label{
     position:relative;
     width: 100%;
 }
 
-.pesquisar label input{
+#pesquisar label input{
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -195,7 +195,7 @@ body{
     border: 1px solid var(--black2);
 }
 
-.pesquisar label ion-icon{
+#pesquisar label ion-icon{
     position:absolute;
     top: 0;
     left: 10px;
@@ -333,11 +333,22 @@ body{
 }
 
 /* Tabela */
-td,tr,table{
+tr,td,table{
+    padding: 5px;
     border:2px solid var(--black2) ;
-    margin: 15% 0 0 0;
-    padding: 10px;
+    margin:5% 0 0 8%;
+   
 }
+td{
+     text-align: center;
+     font-size: 20px;
+     
+}
+
+
+
+
+
 
 @media (max-width:768px) {
    .details{

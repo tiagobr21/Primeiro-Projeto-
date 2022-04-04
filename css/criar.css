@@ -255,11 +255,11 @@ body{
     width: 120%;
     border-radius: 5px;
     transition: 1s;
+    display: none;
 }
 
 #form_escala.ativo{
-    display: none;
-
+    display: inline;
 }
 
 #nome{

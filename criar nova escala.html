@@ -89,8 +89,13 @@
                                 <form onsubmit="cadastraEscala()" id="form_escala">
                                     <div class="titulo"><h1>Nova Escala</h1></div>
                                     <input id="nome" type="text" placeholder="Nome">
-                                    <input id="tabela" type="checkbox">
-                                    <table id="nome_pessoa"></table>
+                                   
+                                    <fieldset onsubmit="escolherPessoa()">
+                                        <legend>Marque as pessoas para a escala</legend>
+                                            <input id="check" name="check" type="checkbox">
+                                            <label id="nome_pessoa" for="check"></label>
+                                    </fieldset>
+
                                     <input id="locais" type="text" placeholder="Local">
                                     <input id="data" type="date" placeholder="Data">
                                     <input id="criar" type="submit" value="Criar">

@@ -16,23 +16,23 @@
 function cadastraPessoa(){
  event.preventDefault()
  url = "https://app-escala-api.herokuapp.com/v1/pessoas"
- let nome_pessoa = document.getElementById("nome_pessoa").value
- let fone = document.getElementById("fone").value
+ let nome = document.getElementById("nome").value
+ let telefone = document.getElementById("telefone").value
  let endereco = document.getElementById("endereco").value
  let idade = document.getElementById("idade").value
- let data_nascimento = document.getElementById("data_nascimento").value
- console.log(nome_pessoa)
- console.log(fone)
+ let dataNascimento = document.getElementById("dataNascimento").value
+ console.log(nome)
+ console.log(telefone)
  console.log(endereco)
  console.log(idade)
- console.log(data_nascimento)
+ console.log(dataNascimento)
 
  body ={
-   "nome_pessoa": nome_pessoa,
-   "fone": fone,
+   "nome": nome,
+   "telofone": telefone,
    "endereco": endereco,
    "idade": idade,
-   "data_nascimento": data_nascimento
+   "dataNascimento": dataNascimento
    
  }
 

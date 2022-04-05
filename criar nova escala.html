@@ -20,7 +20,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="home.html">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Home</span>
                         </a>
@@ -89,7 +89,8 @@
                                 <form onsubmit="cadastraEscala()" id="form_escala">
                                     <div class="titulo"><h1>Nova Escala</h1></div>
                                     <input id="nome" type="text" placeholder="Nome">
-                                    <input id="pessoas" type="checkbox" placeholder="Pessoas">
+                                    <input id="tabela" type="checkbox">
+                                    <table id="nome_pessoa"></table>
                                     <input id="locais" type="text" placeholder="Local">
                                     <input id="data" type="date" placeholder="Data">
                                     <input id="criar" type="submit" value="Criar">
@@ -139,5 +140,6 @@
         </script>
 
         <script src="js/post_escala.js"></script>
+        <script src="js/post_escala-pessoa.js"></script>
     </body>
     </html>

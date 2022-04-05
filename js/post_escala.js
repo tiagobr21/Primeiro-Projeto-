@@ -17,17 +17,14 @@ function cadastraEscala(){
  event.preventDefault()
  url = "https://app-escala-api.herokuapp.com/v1/escalas"
  let nome = document.getElementById("nome").value
- let pessoas = document.getElementById("pessoas").value
  let locais = document.getElementById("locais").value
  let data = document.getElementById("data").value
  console.log(nome)
- console.log(pessoas)
  console.log(locais)
  console.log(data)
  
  body ={
    "nome": nome,
-   "pessoas": null,
    "locais": null,
    "data": data
    

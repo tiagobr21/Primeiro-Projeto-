@@ -12,7 +12,6 @@
 
 }
 
-
 function cadastraEscala(){
  event.preventDefault()
  url = "https://app-escala-api.herokuapp.com/v1/escalas"
@@ -33,6 +32,8 @@ function cadastraEscala(){
  fazPost(url,body)
  
 }
+
+
 
 
 

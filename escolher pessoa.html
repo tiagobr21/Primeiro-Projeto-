@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='css/consultar.css'>
+    <link rel='stylesheet' type='text/css' href='css/pessoas.css'>
    
 </head>
 <body>
@@ -69,29 +69,24 @@
                     <div class="toggle">
                         <ion-icon name="menu-outline"></ion-icon>
                     </div><!-- toggle -->
-
                     <div class="pesquisar">
-                        <label>
-                            <input type="text" id="txtBusca" placeholder="Pesquise aqui">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </label>
-                        </div><!-- pesquisar -->   
-
+                       <label>
+                           <input type="text" placeholder="Pesquise aqui">
+                           <ion-icon name="search-outline"></ion-icon>
+                       </label>
+                    </div><!-- pesquisar -->   
                     <div class="user">
                         <img src="img/user.webp">
                     </div><!-- user -->
                  
                 </div><!-- topbar -->
 
-               
-                  <table id="tabela">
-                      <td>Nome</td>
-                      <td>Telefone</td>
-                      <td>Endereço</td>
-                      <td>Idade</td>
-                      <td>Data de Nascimento</td>
-                    </table>
-               
+                <div class="grid">
+                    <form onsubmit="cadastraPessoa()" id="form_criarpessoa">
+                       <h1>ola</h1>
+                    </form>
+                     
+                </div><!-- grid -->
 
             </div><!-- main -->
     </div><!-- container -->
@@ -134,6 +129,6 @@
 
     </script>
 
-    <script src="js/get_pessoa.js"></script>
+    <script src="js/post_escala-pessoa.js"></script>
 </body>
 </html>

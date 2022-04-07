@@ -1,6 +1,7 @@
 
  /* API */
 
+
 function fazGet(url){
    let request = new XMLHttpRequest()
    request.open('GET',url,false)
@@ -45,8 +46,8 @@ function principal(){
       //adicionar na tabela
 }
 
-principal() 
 
+principal() 
 
 /* Busca */
 

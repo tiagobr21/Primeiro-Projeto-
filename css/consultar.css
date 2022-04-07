@@ -179,12 +179,12 @@ body{
    margin: 0 10px;
 }
 
-#pesquisar label{
+.pesquisar label{
     position:relative;
     width: 100%;
 }
 
-#pesquisar label input{
+.pesquisar label input{
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -195,7 +195,7 @@ body{
     border: 1px solid var(--black2);
 }
 
-#pesquisar label ion-icon{
+.pesquisar label ion-icon{
     position:absolute;
     top: 0;
     left: 10px;

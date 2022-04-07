@@ -1,6 +1,7 @@
 
  /* API */
 
+
  function fazGet(url){
   let request = new XMLHttpRequest()
   request.open('GET',url,false)
@@ -10,13 +11,15 @@
 
 function escolherPessoa(pessoa){
    Pessoa = document.createElement("tr");
-   
+
+   tdInput = document.createElement("input")
+   tdInput.setAttribute("type", "checkbox");
    tdNome = document.createElement("td")
-   
- 
+  
+   tdInput.innerHTML = pessoa.check
    tdNome.innerHTML = pessoa.nome
-
-
+   
+   Pessoa.appendChild(tdInput);
    Pessoa.appendChild(tdNome);
   
   
@@ -29,9 +32,11 @@ function principal(){
   data = fazGet("https://app-escala-api.herokuapp.com/v1/pessoas");
   let pessoas = JSON.parse(data);
   let nome_pessoa = document.getElementById("nome_pessoa")
- 
+  let check = document.getElementById("check")
+  check.setAttribute("type", "checkbox");
   pessoas.forEach(element => {
     let Pessoa = escolherPessoa(element)
+    check.appendChild(Pessoa)
     nome_pessoa.appendChild(Pessoa)
     
   });

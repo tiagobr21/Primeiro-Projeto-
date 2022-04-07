@@ -86,19 +86,21 @@
                     <div class="grid">
                         <button id="btn_escala">Criar Escala</button>
                         
-                                <form onsubmit="cadastraEscala()" id="form_escala">
+                                <form action="http://127.0.0.1:5500/escolher%20pessoa.html" onsubmit="cadastraEscala()" id="form_escala">
                                     <div class="titulo"><h1>Nova Escala</h1></div>
                                     <input id="nome" type="text" placeholder="Nome">
                                    
-                                    <fieldset onsubmit="escolherPessoa()">
+                                  <!--   <fieldset onsubmit="escolherPessoa()">
                                         <legend>Marque as pessoas para a escala</legend>
-                                            <input id="check" name="check" type="checkbox">
+                                            <div type="checkbox"  id="check" >
                                             <label id="nome_pessoa" for="check"></label>
-                                    </fieldset>
+                                            
+                                    </fieldset> -->
 
                                     <input id="locais" type="text" placeholder="Local">
                                     <input id="data" type="date" placeholder="Data">
-                                    <input id="criar" type="submit" value="Criar">
+                                   <a href="escolher pessoa.html" ><input  id="criar" type="submit" value="Criar"></a>
+                                   
                                 </form>
                                 
                     </div><!-- grid -->
@@ -145,6 +147,6 @@
         </script>
 
         <script src="js/post_escala.js"></script>
-        <script src="js/post_escala-pessoa.js"></script>
+      
     </body>
     </html>

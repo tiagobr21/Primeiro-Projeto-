@@ -82,8 +82,13 @@
                 </div><!-- topbar -->
 
                 <div class="grid">
-                    <form onsubmit="cadastraPessoa()" id="form_criarpessoa">
-                       <h1>ola</h1>
+                    <form onsubmit="mandarPessoa()" id="form_criarpessoa">
+                     <!--   <fieldset onsubmit="escolherPessoa()">
+                             <legend>Marque as pessoas para a escala</legend>
+                                    <div type="checkbox"  id="check" >
+                                    <label id="nome_pessoa" for="check"></label>        
+                        </fieldset>   -->
+                        <input  id="criar" type="submit" value="pessoa" >
                     </form>
                      
                 </div><!-- grid -->
@@ -94,7 +99,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
+<!--     <script>
         //MenuToggle
         let toggle = document.querySelector('.toggle');
         let navigation = document.querySelector('.navigation');
@@ -128,7 +133,9 @@
         button.addEventListener('click', callForm)
 
     </script>
-
+ -->
+    <script src="js/get_escala-pessoa.js"></script>
     <script src="js/post_escala-pessoa.js"></script>
+    
 </body>
 </html>

@@ -70,10 +70,11 @@
                         <ion-icon name="menu-outline"></ion-icon>
                     </div><!-- toggle -->
 
-                    <div class="pesquisar">
+                    <div class="search">
                         <label>
-                            <input type="text" id="txtBusca" placeholder="Pesquise aqui">
+                            <input type="search" class="search-input" placeholder="Pesquise aqui">
                             <ion-icon name="search-outline"></ion-icon>
+                            <button class="search-button">Pesquisar</button>
                         </label>
                         </div><!-- pesquisar -->   
 
@@ -83,7 +84,7 @@
                  
                 </div><!-- topbar -->
 
-               
+               <div id="pessoa">
                   <table id="tabela">
                       <td>Nome</td>
                       <td>Telefone</td>
@@ -91,7 +92,7 @@
                       <td>Idade</td>
                       <td>Data de Nascimento</td>
                     </table>
-               
+                </div>
 
             </div><!-- main -->
     </div><!-- container -->
@@ -99,7 +100,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
+<!--     <script>
         //MenuToggle
         let toggle = document.querySelector('.toggle');
         let navigation = document.querySelector('.navigation');
@@ -132,8 +133,9 @@
         
         button.addEventListener('click', callForm)
 
-    </script>
+    </script> -->
 
     <script src="js/get_pessoa.js"></script>
+  
 </body>
 </html>

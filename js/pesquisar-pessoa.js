@@ -12,7 +12,10 @@ function pessoaRequest() {
   fetch(baseUrl)
     .then(response => response.json())
     .then(data => {
-     console.log(data)
+
+     document.querySelector('#tabela').innerHTML = data[1].nome
+     
+     console.log(data[1])
     })
     .catch(err => console.log(err));
 }

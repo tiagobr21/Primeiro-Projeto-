@@ -72,9 +72,9 @@
 
                     <div class="search">
                         <label>
-                            <input type="search" class="search-input" placeholder="Pesquise aqui">
+                            <input type="search" id="search-input" placeholder="Pesquise aqui">
                             <ion-icon name="search-outline"></ion-icon>
-                            <button class="search-button">Pesquisar</button>
+                            <button onclick="pessoaRequest()" id="search-button">Pesquisar</button>
                         </label>
                         </div><!-- pesquisar -->   
 
@@ -84,7 +84,7 @@
                  
                 </div><!-- topbar -->
 
-               <div id="pessoa">
+               
                   <table id="tabela">
                       <td>Nome</td>
                       <td>Telefone</td>
@@ -92,7 +92,7 @@
                       <td>Idade</td>
                       <td>Data de Nascimento</td>
                     </table>
-                </div>
+               
 
             </div><!-- main -->
     </div><!-- container -->
@@ -136,6 +136,7 @@
     </script> -->
 
     <script src="js/get_pessoa.js"></script>
+    <script src="js/pesquisar-pessoa.js"></script>
   
 </body>
 </html>

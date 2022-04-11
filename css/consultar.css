@@ -195,13 +195,20 @@ body{
     border: 1px solid var(--black2);
 }
 
-.search-button{
+#search-button{
+    cursor: pointer;
     position:absolute;
     margin:2px 0 0 10px;
     border-radius: 20px;
     border: none;
     padding: 10px;
 }
+
+
+/* #tabela.ativo{
+  display: none;
+} */
+
 
 .search label ion-icon{
     position:absolute;

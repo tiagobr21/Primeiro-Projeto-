@@ -1,12 +1,12 @@
 // API endpoint --------------------------------------------
-const baseUrl = 'https://app-escala-api.herokuapp.com/v1/pessoas';
+const baseUrl = 'https://app-escala-api.herokuapp.com/v1/pessoas/findByNome/Tiago Braga';
 
 const searchInput = getElement('#search-input'),
  searchButton = getElement('#search-button'),
  container = getElement('#tabela'),
  erroMessage = getElement('#error')
  
-
+let pessoaNome,pessoa,person;
 
  function getElement(element) {
   return document.querySelector(element);
@@ -16,44 +16,52 @@ function pessoaRequest() {
   fetch(baseUrl)
     .then(response => response.json())
     .then(data => {
- 
-    const Tabela = [document.querySelector('table').getAttribute = data[1].nome,
-     document.querySelector('table').getAttribute = data[1].endereco,
-     document.querySelector('table').getAttribute = data[1].idade]
-     
-    document.querySelector("#tabela").innerHTML = Tabela
-    
-    console.log(Tabela)
-    
-     
-    
+     pessoa = data
+    console.log(pessoa)
     })
     .catch(err => console.log(err));
 }
 
-function startApp(data) {
-  pessoaRequest(baseUrl, data);
+
+function createPessoa(){
+/*    let Tabela = [document.querySelector('table').getAttribute = pessoa.nome,
+  document.querySelector('table').getAttribute = pessoa.endereco,
+  document.querySelector('table').getAttribute = pessoa.idade]
+  
+  document.querySelector("#tabela").innerHTML = Tabela
+
+  return Tabela */
+
+  document.querySelector("#tabela").innerHTML = pessoa.baseUrl
+
+  
+  
+}
+
+
+function startApp(pessoaNome) {
+  pessoaRequest(baseUrl, pessoaNome);
  
   setTimeout(function () {
     //Exibe uma mensagem caso o pokemon pesquisado não exista
-    if(data.detail) {
+    if(pessoa.detail) {
       erroMessage.style.display = 'block';
       container.style.display = 'none';
     }else{
       erroMessage.style.display = 'none';
       container.style.display = 'flex';
-      container.innerHTML = pessoaRequest();
+      container.innerHTML = createPessoa();
     }
   }, 2000);
 }
 
 searchButton.addEventListener('click', event => {
   event.preventDefault();
-  data = searchInput.value.toLowerCase();
-  startApp(data);
+  pessoaNome = searchInput.value.toLowerCase();
+  startApp(pessoaNome);
   container.classList.add('fade')
 
   setTimeout(()=>{
     container.classList.remove('fade')
   },3000)
-});
+}); 

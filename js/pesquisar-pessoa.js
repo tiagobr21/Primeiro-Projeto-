@@ -1,5 +1,75 @@
-// API endpoint --------------------------------------------
-const baseUrl = 'https://app-escala-api.herokuapp.com/v1/pessoas/findByNome/Tiago Braga';
+
+
+function botao(){
+   let input = document.querySelector('#search-input')
+   let pesquisa = input.value;
+   console.log(pesquisa)
+   return pesquisa
+}
+
+
+
+function fazGet(url){
+  let request = new XMLHttpRequest()
+  request.open('GET',url,false)
+  request.send()
+  return request.responseText
+}
+
+function consultarEscala(pessoa){
+   Pessoa = document.createElement("tr");
+   tdNome = document.createElement("td")
+   tdTelefone = document.createElement("td")
+   tdEndereco = document.createElement("td")
+   tdIdade = document.createElement("td")
+   tdDataNascimento = document.createElement("td")
+ 
+   tdNome.innerHTML = pessoa.nome
+   tdTelefone.innerHTML = pessoa.telefone
+   tdEndereco.innerHTML = pessoa.endereco
+   tdIdade.innerHTML = pessoa.idade
+   tdDataNascimento.innerHTML = pessoa.dataNascimento
+
+   Pessoa.appendChild(tdNome);
+   Pessoa.appendChild(tdTelefone);
+   Pessoa.appendChild(tdEndereco);
+   Pessoa.appendChild(tdIdade);
+   Pessoa.appendChild(tdDataNascimento);
+
+   return Pessoa
+   
+}
+
+
+function principal(){
+  data = fazGet("https://app-escala-api.herokuapp.com/v1/pessoas/findByNome/",pesquisa);
+  let pessoas = JSON.parse(data);
+  let tabela = document.getElementById("tabela")
+  /* pessoas.forEach(element => {
+    let Pessoa = consultarEscala(element)
+    tabela.appendChild(Pessoa)
+  }); */
+  Object.keys(pessoas).forEach(key => {
+    let Pessoa = consultarEscala(pessoas[key])
+    tabela.appendChild(Pessoa)
+  })
+
+
+ 
+}
+
+
+principal() 
+
+
+
+
+
+
+
+
+/* // API endpoint --------------------------------------------
+const baseUrl = 'https://app-escala-api.herokuapp.com/v1/pessoas';
 
 const searchInput = getElement('#search-input'),
  searchButton = getElement('#search-button'),
@@ -24,15 +94,14 @@ function pessoaRequest() {
 
 
 function createPessoa(){
-/*    let Tabela = [document.querySelector('table').getAttribute = pessoa.nome,
-  document.querySelector('table').getAttribute = pessoa.endereco,
-  document.querySelector('table').getAttribute = pessoa.idade]
+   let Tabela = [document.querySelector('table').getAttribute = pessoa[4].nome,
+  document.querySelector('table').getAttribute = pessoa[4].endereco,
+  document.querySelector('table').getAttribute = pessoa[4].idade]
   
   document.querySelector("#tabela").innerHTML = Tabela
 
-  return Tabela */
+  return Tabela
 
-  document.querySelector("#tabela").innerHTML = pessoa.baseUrl
 
   
   
@@ -64,4 +133,4 @@ searchButton.addEventListener('click', event => {
   setTimeout(()=>{
     container.classList.remove('fade')
   },3000)
-}); 
+});  */

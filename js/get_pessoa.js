@@ -1,4 +1,4 @@
-
+/* 
 
 function fazGet(url){
    let request = new XMLHttpRequest()
@@ -44,6 +44,6 @@ function principal(){
 
 
 principal() 
- 
+  */
 
  

@@ -5,24 +5,97 @@ function botao(){
   fetch(baseUrl)
     .then(response => response.json())
     .then(data => {
-      
-       let input = document.querySelector('#search-input')
-       let pesquisa = input.value
-       if(pesquisa === data[1].nome){
-        document.querySelector('table').innerHTML = data[1].nome
-        console.log(true)
-      }else{
-       console.log(false)
-      } 
-      
-     }
+     let input = document.querySelector('#search-input')
+     let pesquisa = input.value
+
+      for(i = 0; i<5; i++){
+
+      if(pesquisa == data[i].nome){
+       
+       document.querySelector('#nome').innerHTML = data[i].nome
+       document.querySelector('#endereco').innerHTML = data[i].endereco
+       document.querySelector('#idade').innerHTML = data[i].idade
+       document.querySelector('#data').innerHTML = data[i].dataNascimento  
+       
+       console.log(true)
+     }else{
+      console.log(false)
+     } 
+     console.log(data[i].nome) 
+    }
+    }
+
+     
+    
     )}  
 
 
 
   
     
-
+  
+    /* 
+    
+    
+    function botao(){
+       let input = document.querySelector('#search-input')
+       let pesquisa = input.value;
+       console.log(pesquisa)
+       return pesquisa
+    }
+    
+    
+    
+    function fazGet(url){
+      let request = new XMLHttpRequest()
+      request.open('GET',url,false)
+      request.send()
+      return request.responseText
+    }
+    
+    function consultarEscala(pessoa){
+       Pessoa = document.createElement("tr");
+       tdNome = document.createElement("td")
+       tdTelefone = document.createElement("td")
+       tdEndereco = document.createElement("td")
+       tdIdade = document.createElement("td")
+       tdDataNascimento = document.createElement("td")
+     
+       tdNome.innerHTML = pessoa.nome
+       tdTelefone.innerHTML = pessoa.telefone
+       tdEndereco.innerHTML = pessoa.endereco
+       tdIdade.innerHTML = pessoa.idade
+       tdDataNascimento.innerHTML = pessoa.dataNascimento
+    
+       Pessoa.appendChild(tdNome);
+       Pessoa.appendChild(tdTelefone);
+       Pessoa.appendChild(tdEndereco);
+       Pessoa.appendChild(tdIdade);
+       Pessoa.appendChild(tdDataNascimento);
+    
+       return Pessoa
+       
+    }
+    
+    
+    function principal(){
+      data = fazGet("https://app-escala-api.herokuapp.com/v1/pessoas/findByNome/",pesquisa);
+      let pessoas = JSON.parse(data);
+      let tabela = document.getElementById("tabela")
+    
+      Object.keys(pessoas).forEach(key => {
+        let Pessoa = consultarEscala(pessoas[key])
+        tabela.appendChild(Pessoa)
+      })
+    
+    
+     
+    }
+    
+    
+    principal()  */
+    
+    
 
 
 

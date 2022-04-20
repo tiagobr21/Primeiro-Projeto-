@@ -351,8 +351,22 @@ body{
 tr,td,table{
     padding: 20px;
     border:2px solid var(--black2) ;
-    margin:5% 0 0 8%;
+    margin:5% 0 0 20%;
    
+}
+
+#nome{
+    width: 10px;
+    border:2px solid var(--black2) ;
+    font-size: 20px;
+}
+
+#data{
+    
+    width: 40px;
+    
+    border:2px solid var(--black2) ;
+    font-size: 20px;
 }
 td{
      text-align: center;

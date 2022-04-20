@@ -29,7 +29,7 @@ function cadastraPessoa(){
 
  body ={
    "nome": nome,
-   "telofone": telefone,
+   "telefone": telefone,
    "endereco": endereco,
    "idade": idade,
    "dataNascimento": dataNascimento

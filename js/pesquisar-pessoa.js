@@ -5,25 +5,32 @@ function botao(){
   fetch(baseUrl)
     .then(response => response.json())
     .then(data => {
-     let input = document.querySelector('#search-input')
-     let pesquisa = input.value
+     
 
-      for(i = 0; i<5; i++){
-
-      if(pesquisa == data[i].nome){
-       
+      let input = document.querySelector('#search-input')
+      pesquisa = input.value
+    
+      for(i = 0; i<=1000; i++){
+      
+       Nome = data[i].nome
+       nomeMinusc = Nome.toLowerCase();   
+     
+        
+      if(pesquisa ===  nomeMinusc){
+      
        document.querySelector('#nome').innerHTML = data[i].nome
+       document.querySelector('#telefone').innerHTML = data[i].telefone
        document.querySelector('#endereco').innerHTML = data[i].endereco
        document.querySelector('#idade').innerHTML = data[i].idade
-       document.querySelector('#data').innerHTML = data[i].dataNascimento  
-       
+       document.querySelector('#data').innerHTML = data[i].dataNascimento   
+        
        console.log(true)
      }else{
       console.log(false)
      } 
-     console.log(data[i].nome) 
-    }
-    }
+     console.log(nomeMinusc) 
+    } 
+    } 
 
      
     

@@ -75,6 +75,7 @@
                             <input type="search" id="search-input" name="search-input" placeholder="Pesquise aqui">
                             <ion-icon name="search-outline"></ion-icon>
                             <button onclick="botao()" id="search-button">Pesquisar</button>
+                            </button>
                         </label>
                         </div><!-- pesquisar -->   
 
@@ -86,7 +87,7 @@
 
                
                   <table id="tabela">
-                      <tr>
+                      <tr id="tr">
                       <td id="nome">Nome</td>
                       <td id="telefone">Telefone</td>
                       <td id="endereco">Endereço</td>
@@ -94,7 +95,7 @@
                       <td id="data">Data de Nascimento</td>
                       </tr>
                     </table>
-            
+               
 
             </div><!-- main -->
     </div><!-- container -->
@@ -103,8 +104,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        //MenuToggle
-     /*    let toggle = document.querySelector('.toggle');
+      /*   //MenuToggle
+         let toggle = document.querySelector('.toggle');
         let navigation = document.querySelector('.navigation');
         let main = document.querySelector('.main');
 
@@ -133,21 +134,23 @@
             form.classList.toggle('ativo')
         }
         
-        button.addEventListener('click', callForm)  */
-
-        let button = document.querySelector('#search-button');
+        button.addEventListener('click', callForm)  
+ */
+     /*  let botaoPesquisar = document.querySelector('#search-button');
         let tabela = document.querySelector('#tabela')
 
         function callTabela(){
-            tabela.classList.toggle('ativo')
+            tabela.classList.add('ativo')
         }
         
-        button.addEventListener('click', callTabela)
+        botaoPesquisar.addEventListener('click', callTabela)   */
 
     </script> 
 
     <script src="js/get_pessoa.js"></script>
     <script src="js/pesquisar-pessoa.js"></script>
+  
+  
   
 </body>
 </html>

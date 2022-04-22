@@ -86,7 +86,7 @@
                 </div><!-- topbar -->
 
                
-                  <table id="tabela">
+                  <table id="tabela1">
                       <tr>
                       <td id="nome">Nome</td>
                       <td id="telefone">Telefone</td>
@@ -95,6 +95,16 @@
                       <td id="data">Data de Nascimento</td>
                       </tr>
                     </table>
+
+                    <table id="tabela2">
+                        <tr>
+                        <td id="nome2">Nome</td>
+                        <td id="telefone2">Telefone</td>
+                        <td id="endereco2">Endereço</td>
+                        <td id="idade2">Idade</td>
+                        <td id="data2">Data de Nascimento</td>
+                        </tr>
+                      </table>
                
 
             </div><!-- main -->
@@ -136,19 +146,21 @@
         
         button.addEventListener('click', callForm)  
  */
-     /*  let botaoPesquisar = document.querySelector('#search-button');
-        let tabela = document.querySelector('#tabela')
-
+        let botaoPesquisar = document.querySelector('#search-button');
+        let tabela1 = document.querySelector('#tabela1')
+        let tabela2 = document.querySelector('#tabela2')
+       
         function callTabela(){
-            tabela.classList.add('ativo')
+            tabela1.classList.add('ativo')
+            tabela2.classList.add('ativo')
         }
         
-        botaoPesquisar.addEventListener('click', callTabela)   */
+        botaoPesquisar.addEventListener('click', callTabela)   
 
     </script> 
 
     <script src="js/get_pessoa.js"></script>
-    <script src="js/pesquisar-pessoa.js"></script>
+    <script  src="js/pesquisar-pessoa.js"></script>
   
   
   

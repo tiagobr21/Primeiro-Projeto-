@@ -11,7 +11,7 @@ function botao(){
 
      
      
-      for(i = 0; i<=1; i++){
+      for(i = 0; i<=2; i++){
     
       Nome = data[i].nome
       nomeMaiusc = Nome.toUpperCase();  
@@ -19,11 +19,11 @@ function botao(){
         
       if(pesquisa ===  data[i].nome){
       
-       document.querySelector('#nome').innerHTML = nomeMaiusc
-       document.querySelector('#telefone').innerHTML = data[i].telefone
-       document.querySelector('#endereco').innerHTML = data[i].endereco
-       document.querySelector('#idade').innerHTML = data[i].idade
-       document.querySelector('#data').innerHTML = data[i].dataNascimento   
+       document.querySelector('#nome2').innerHTML = nomeMaiusc
+       document.querySelector('#telefone2').innerHTML = data[i].telefone
+       document.querySelector('#endereco2').innerHTML = data[i].endereco
+       document.querySelector('#idade2').innerHTML = data[i].idade
+       document.querySelector('#data2').innerHTML = data[i].dataNascimento   
         
        console.log(true)
      }else{

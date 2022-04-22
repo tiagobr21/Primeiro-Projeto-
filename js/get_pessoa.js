@@ -1,4 +1,4 @@
-/* 
+
 
 function fazGet(url){
    let request = new XMLHttpRequest()
@@ -34,16 +34,17 @@ function consultarEscala(pessoa){
 function principal(){
    data = fazGet("https://app-escala-api.herokuapp.com/v1/pessoas");
    let pessoas = JSON.parse(data);
-   let tabela = document.getElementById("tabela")
+   let tabela = document.getElementById("tabela1")
    pessoas.forEach(element => {
      let Pessoa = consultarEscala(element)
      tabela.appendChild(Pessoa)
+     
    });
-  
+   
 }
 
 
-principal()  */
+principal()  
   
 
     

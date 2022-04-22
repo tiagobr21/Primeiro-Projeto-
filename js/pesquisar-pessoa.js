@@ -11,11 +11,7 @@ function botao(){
 
      
      
-      for(i = 0; i<=2; i++){
-    
-      Nome = data[i].nome
-      nomeMaiusc = Nome.toUpperCase();  
-     
+      for(i = 0; i<=1000; i++){
         
       if(pesquisa ===  data[i].nome){
       

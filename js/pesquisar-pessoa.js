@@ -19,7 +19,7 @@ function botao(){
         
       if(pesquisa ===  data[i].nome){
       
-       document.querySelector('#nome2').innerHTML = nomeMaiusc
+       document.querySelector('#nome2').innerHTML = data[i].nome  
        document.querySelector('#telefone2').innerHTML = data[i].telefone
        document.querySelector('#endereco2').innerHTML = data[i].endereco
        document.querySelector('#idade2').innerHTML = data[i].idade

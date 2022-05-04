@@ -364,7 +364,6 @@ tr,td,table{
 #data{
     
     width: 40px;
-    
     border:2px solid var(--black2) ;
     font-size: 20px;
 }

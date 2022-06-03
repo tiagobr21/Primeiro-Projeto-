@@ -6,6 +6,7 @@
     <title>dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='css/pessoas.css'>
+    <script src="./vue/vue.js"></script>
    
 </head>
 <body>
@@ -80,26 +81,97 @@
                     </div><!-- user -->
                  
                 </div><!-- topbar -->
-
-                <div class="grid">
-                    <form onsubmit="fazPut()" id="form_criarpessoa">
-                     <!--   <fieldset onsubmit="escolherPessoa()">
-                             <legend>Marque as pessoas para a escala</legend>
-                                    <div type="checkbox"  id="check" >
-                                    <label id="nome_pessoa" for="check"></label>        
-                        </fieldset>   -->
-                        <input  id="criar" type="submit" value="Enviar" >
-                    </form>
-                     
-                </div><!-- grid -->
-
+                <div id="app">
+                   <h1 id="title">Escolha os integrantes da Escala</h1>
+                   <button id="puxaDados" @click="puxarNomes">Selecionar</button>
+                   <select multiple="multiple" id="select" name="nomes" id="nomes" v-model="nomeSelecionado">
+                       <option id="option_desc" disabled >Selecione um nome</option>
+                       <option id="options"  v-for="value in nomes" :value="value.nome">{{value.nome}}</option>
+                   </select>
+                   <p id="integrantes">Integrantes: {{nomeSelecionado}}</p>
+                </div><!-- app -->
             </div><!-- main -->
     </div><!-- container -->
+
+    <script>
+
+        const vm = new Vue({
+          el:'#app',
+          data:{
+            nomeSelecionado:"", 
+            nomes:{}
+          },
+          methods:{
+              puxarNomes(){
+                  fetch('https://app-escala-api.herokuapp.com/v1/pessoas')
+                  .then(r => r.json())
+                  .then(r=>{
+                     this.nomes = r
+                  }) 
+              }
+          }
+        });
+ 
+     </script><!-- Vue.js -->
+ 
+     <style>
+        #app{
+          width: 80%;
+          height: 30%;
+          margin: 50px 0 0 10%;
+          padding: 150px;
+          background-color: whitesmoke;
+          border-radius: 20px;
+          border: 5px solid black ;
+        }
+        #puxaDados{
+            margin: 70px 0 0 80px;
+            padding: 15px;
+            width: 25%;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: #287bff;
+            color:#f5f5f5 ;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #puxaDados:hover{
+            margin: 70px 0 0 80px;
+            padding: 15px;
+            width: 25%;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: #f5f5f5;
+            color: #287bff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #select{
+            margin-top:50px ;
+            padding:    px;
+            width: 30%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #option_desc{
+            font-size: 15px;
+            text-align: center;
+        }
+        #options{
+            font-size: 16px;
+        }
+        #integrantes{
+            margin: 50px 0 0 0;
+        }
+        #title{
+            margin-top: -130px;
+        }
+     </style><!-- Style Vue.js -->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<!--     <script>
+     <script>
         //MenuToggle
         let toggle = document.querySelector('.toggle');
         let navigation = document.querySelector('.navigation');
@@ -133,7 +205,9 @@
         button.addEventListener('click', callForm)
 
     </script>
- -->
+
+    
+
     <script src="js/post_escala-pessoa.js"></script>
     
 </body>
